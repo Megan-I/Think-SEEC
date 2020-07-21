@@ -30,8 +30,8 @@ def littleScore(score):
 	print("\nPress 9 to continue to next question")
 
 
-def bigScore():
-	print("\n\t\ttotal score")
+def bigScore(score):
+	print("\n\t\ttotal score: ", score)
 	print("\n\t\ttotal time")
 	print("\n\n\t\tPlay again?")
 
@@ -45,7 +45,6 @@ def scoreboard(score):
 	print("scoreboard")
 
 def outro():
-	print("Final screen test")
 	print("\n\n\tYou completed THINK!")
 	print("\n\tPress 9 to see your final score!")
 

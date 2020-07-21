@@ -1,0 +1,20 @@
+1.Has both fur and claws.
+100000011
+2.Has scales and is a reptile.
+100010100
+3.Is not a mammal and can swim.
+101011100
+4.Is a mammal and has hooves.
+110000000
+5.Native to the southern hemisphere and is a marsupial.
+100000010
+6.Is a fish or is not a reptile.
+111101011
+7.Is a mammal or has legs.
+101111011
+8.Can fly or slither.
+100100100
+9.Has feathers or scales.
+101111100
+10.Can lay eggs and is not a marsupial.
+101111100

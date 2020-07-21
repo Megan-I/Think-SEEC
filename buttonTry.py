@@ -269,6 +269,7 @@ if __name__ == '__main__':
 			score1 = scoring.score(user,key)
 			if(score1 == -1):
 				screens.incomplete()
+				screens.questionScreen(q1.question)
 				q1.answered = False
 				f.scoreFlag = False
 
@@ -298,6 +299,7 @@ if __name__ == '__main__':
 			score2 = scoring.score(user2, key2)
 			if(score2 == -1):
 				screens.incomplete()
+				screens.questionScreen(q2.question)
 				q2.answered = False
 				f.scoreFlag = False
 
@@ -323,6 +325,7 @@ if __name__ == '__main__':
 			score3 = scoring.score(user3, key3)
 			if(score3 == -1):
 				screens.incomplete()
+				screens.questionScreen(q3.question)
 				q3.answered = False
 				f.scoreFlag = False
 
@@ -347,6 +350,7 @@ if __name__ == '__main__':
 			score4 = scoring.score(user4, key4)
 			if(score4 == -1):
 				screens.incomplete()
+				screens.questionScreen(q4.question)
 				q4.answered = False
 				f.scoreFlag = False
 
@@ -374,6 +378,7 @@ if __name__ == '__main__':
 			score5 = scoring.score(user5, key5)
 			if(score5 == -1):
 				screens.incomplete()
+				screens.questionScreen(q5.question)
 				q5.answered = False
 				f.scoreFlag = False
 
@@ -394,10 +399,11 @@ if __name__ == '__main__':
 		if(f.scoreFlag == True):
 			q6.answered = True
 			user6 = getButtonsPressed()
-			key = q6.key
+			key6 = q6.key
 			score6 = scoring.score(user6, key6)
 			if(score6 == -1):
 				screens.incomplete()
+				screens.questionScreen(q6.question)
 				q6.answered = False
 				f.scoreFlag = False
 
@@ -418,13 +424,21 @@ if __name__ == '__main__':
 	while(q7.answered == False):
 		if(f.scoreFlag == True):
 			q7.answered = True
+			user7 = getButtonsPressed()
+			key7 = q7.key
+			score7 = scoring.score(user7, key7)
+			if(score7 == -1):
+				screens.incomplete()
+				screens.questionScreen(q7.question)
+				q7.answered = False
+				f.scoreFlag = False
 
 
 	f.scoreFlag = False
 	clear(f)
 	f.startFlag = False
 
-	screens.littleScore()
+	screens.littleScore(score7)
 
 	while(f.startFlag == False):
 		utdColor()
@@ -435,12 +449,21 @@ if __name__ == '__main__':
 	while(q8.answered == False):
 		if(f.scoreFlag == True):
 			q8.answered = True
+			user8 = getButtonsPressed()
+			key8 = q8.key
+			score8 = scoring.score(user8,key8)
+			if(score8 == -1):
+				screens.incomplete()
+				screens.questionScreen(q8.question)
+				q8.answered = False
+				f.scoreFlag = False
+
 
 	f.scoreFlag = False
 	clear(f)
 	f.startFlag = False
 
-	screens.littleScore()
+	screens.littleScore(score8)
 
 	while(f.startFlag == False):
 		utdColor()
@@ -451,12 +474,21 @@ if __name__ == '__main__':
 	while(q9.answered == False):
 		if(f.scoreFlag == True):
 			q9.answered = True
+			user9 = getButtonsPressed()
+			key9 = q9.key
+			score9 = scoring.score(user9, key9)
+			if(score9 == -1):
+				screens.incomplete()
+				screens.questionScreen(q9.question)
+				q9.answered = False
+				f.scoreFlag = False
+
 
 	f.scoreFlag = False
 	clear(f)
 	f.startFlag = False
 
-	screens.littleScore()
+	screens.littleScore(score9)
 
 	while(f.startFlag == False):
 		utdColor()
@@ -467,9 +499,21 @@ if __name__ == '__main__':
 	while(q10.answered == False):
 		if(f.scoreFlag == True):
 			q10.answered = True
+			user10 = getButtonsPressed()
+			key10 = q10.key
+			score10 = scoring.score(user10,key10)
+			if(score10 == -1):
+				screens.incomplete()
+				screens.questionScreen(q10.question)
+				q10.answered = False
+				f.scoreFlag = False
+
 
 	clear(f)
 	f.startFlag = False
+
+
+	screens.littleScore(score10)
 
 	screens.outro()
 
@@ -477,4 +521,7 @@ if __name__ == '__main__':
 		utdColor()
 		time.sleep(1)
 
-	screens.bigScore()
+	finalScore = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10
+
+
+	screens.bigScore(finalScore)
